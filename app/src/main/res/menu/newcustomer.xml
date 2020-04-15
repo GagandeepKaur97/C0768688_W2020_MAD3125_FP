@@ -2,6 +2,10 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Add Customer" />
-    <item android:title="Add Bill" />
+    <item
+        android:id="@+id/menu1"
+        android:title="Add New Customer" />
+    <item
+        android:id="@+id/menu2"
+        android:title="Logout" />
 </menu>
