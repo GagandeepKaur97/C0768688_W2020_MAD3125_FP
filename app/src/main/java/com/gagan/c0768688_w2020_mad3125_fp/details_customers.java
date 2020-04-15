@@ -14,7 +14,7 @@ public class details_customers extends AppCompatActivity {
     private TextInputEditText edtFirstName;
     private TextInputEditText edtLastName;
     private TextInputEditText edtCEmail;
-    private Button btnCSave;
+    private Button CSave;
 
 
     @Override
@@ -25,9 +25,9 @@ public class details_customers extends AppCompatActivity {
         edtFirstName = findViewById(R.id.firstNameTextInputEditText);
         edtLastName = findViewById(R.id.lastNameTextInputEditText);
         edtCEmail = findViewById(R.id.customerEmailTextInputEditText);
-        btnCSave = findViewById(R.id.customerbutton);
+        CSave = findViewById(R.id.customerbutton);
 
-        btnCSave.setOnClickListener(new View.OnClickListener() {
+        CSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String cID = edtCustomerID.getText().toString().trim();
