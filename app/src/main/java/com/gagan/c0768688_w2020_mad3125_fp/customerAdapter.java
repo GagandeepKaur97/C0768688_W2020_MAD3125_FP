@@ -1,5 +1,6 @@
 package com.gagan.c0768688_w2020_mad3125_fp;
 
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -19,7 +20,9 @@ public class customerAdapter extends RecyclerView.Adapter<customerAdapter.custom
     @NonNull
     @Override
     public customerAdapter.customerviewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        View mView = LayoutInflater.from(parent.getContext()).inflate(R.layout.listcustomers, parent, false);
+        customerviewholder mCustomerViewHolder = new customerviewholder(mView);
+        return mCustomerViewHolder;
     }
 
     @Override
