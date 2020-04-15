@@ -1,5 +1,6 @@
 package com.gagan.c0768688_w2020_mad3125_fp;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,14 +27,24 @@ public class customerAdapter extends RecyclerView.Adapter<customerAdapter.custom
     }
 
     @Override
-    public void onBindViewHolder(@NonNull customerAdapter.customerviewholder holder, int position) {
+    public void onBindViewHolder(@NonNull final customerAdapter.customerviewholder holder, final int position) {
+        customer mCustomer = this.customersArrayList.get(position);
+        holder.txtCustomerName.setText(mCustomer.getFullName());
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                customer cust = customersArrayList.get(position);
+                Intent sint = new Intent(holder.itemView.getContext(), Customer_screen.class);
+                sint.putExtra("customers", cust);
+                holder.itemView.getContext().startActivity(sint);
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
-        return 0;
-
+        return this.customersArrayList.size();
     }
 
  public class customerviewholder extends RecyclerView.ViewHolder {
