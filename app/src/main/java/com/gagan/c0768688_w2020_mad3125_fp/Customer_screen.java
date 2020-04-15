@@ -51,7 +51,7 @@ public class Customer_screen extends AppCompatActivity {
                 startActivity(intent4);
                 return true;
             case R.id.menu5:
-             
+
                 Intent intent5 = new Intent(Customer_screen.this, newInternetBill.class);
                 startActivity(intent5);
                 return true;
