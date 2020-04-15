@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar">
-        <activity android:name=".newHydroBill"></activity>
+        <activity android:name=".newInternetBill"></activity>
+        <activity android:name=".newHydroBill" />
         <activity android:name=".details_customers" />
         <activity android:name=".login_screen" />
         <activity android:name=".MainActivity">
