@@ -14,22 +14,22 @@ import java.util.ArrayList;
 public class list_of_customers extends AppCompatActivity {
     private RecyclerView rvCustomerslist;
     private ArrayList<customer> customers;
-    private customerAdapter customersAdapter;
+    private customerAdapter customerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_of_customers);
-        rvCustomerslist = findViewById(R.id.rvcustomerlist);
+         rvCustomerslist = findViewById(R.id.rvcustomerlist);
 
         customersInfo();
 
-        customersAdapter = new customerAdapter(customers);
+        customerAdapter = new customerAdapter(customers);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
 
         rvCustomerslist.setLayoutManager(mLayoutManager);
 
-        rvCustomerslist.setAdapter(customersAdapter);
+        rvCustomerslist.setAdapter(customerAdapter);
     }
 
     private void customersInfo(){

@@ -59,13 +59,13 @@ public class login_screen extends AppCompatActivity {
                     editor.putString("password",password);
                     editor.apply();
 
-                    Intent intent = new Intent(login_screen.this, details_customers.class);
+                    Intent intent = new Intent(login_screen.this, list_of_customers.class);
                     startActivity(intent);
                 }else {
                     editor.clear();
                     editor.apply();
 
-                    Intent intent = new Intent(login_screen.this, details_customers.class);
+                    Intent intent = new Intent(login_screen.this, list_of_customers.class);
                     startActivity(intent);
                 }
             }

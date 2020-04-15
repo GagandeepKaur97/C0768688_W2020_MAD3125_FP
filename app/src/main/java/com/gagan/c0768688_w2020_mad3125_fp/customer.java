@@ -37,10 +37,12 @@ public class customer implements Serializable {
     }
 
     public String getFullName() {
+        fullName = firstName + lastName;
         return fullName;
     }
 
     public void setFullName(String fullName) {
+//        fullName = firstName + lastName;
         this.fullName = fullName;
     }
 

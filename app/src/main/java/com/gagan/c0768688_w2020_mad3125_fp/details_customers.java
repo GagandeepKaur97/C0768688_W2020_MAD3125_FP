@@ -44,7 +44,7 @@ public class details_customers extends AppCompatActivity {
                 } else if(cEmail.isEmpty()){
                     edtCEmail.setError("Please enter email");
                 } else {
-                    Intent cint = new Intent(details_customers.this, details_customers.class);
+                    Intent cint = new Intent(details_customers.this, list_of_customers.class);
                     startActivity(cint);
                 }
             }
