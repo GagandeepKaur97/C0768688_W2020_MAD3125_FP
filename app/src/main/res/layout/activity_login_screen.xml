@@ -11,14 +11,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="20dp"
         android:layout_marginEnd="70dp"
         android:layout_marginBottom="30dp"
         android:text="LOGIN"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -31,18 +29,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/btn_star_big_on" />
 
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="119dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="70dp"
-        android:text="Remember Me?"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <EditText
         android:id="@+id/Email"
@@ -67,11 +53,9 @@
         android:layout_marginStart="70dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="70dp"
-        android:layout_marginBottom="10dp"
         android:drawableLeft="@android:drawable/ic_menu_view"
         android:ems="10"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Email" />
@@ -81,14 +65,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="70dp"
         android:layout_marginBottom="20dp"
         android:text="Message"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="169dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="30dp"
+        android:text="CheckBox"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
