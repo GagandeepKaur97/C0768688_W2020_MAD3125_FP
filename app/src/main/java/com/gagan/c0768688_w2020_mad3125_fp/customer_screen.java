@@ -15,9 +15,9 @@ import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.ArrayList;
 
-public class customer_screen<Customer> extends AppCompatActivity {
+public class customer_screen<customer> extends AppCompatActivity {
     private RecyclerView recyclerViewcustom;
-    private ArrayList<Customer> customers;
+    private ArrayList<customer> customers;
     private customerlist customersAdapter;
 
     @Override
