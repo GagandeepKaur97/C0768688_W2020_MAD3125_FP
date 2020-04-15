@@ -29,8 +29,8 @@ public class login_screen extends AppCompatActivity {
         setContentView(R.layout.activity_login_screen);
 
 
-        Email = findViewById(R.id.Email);
-        Password = findViewById(R.id.password);
+        Email = findViewById(R.id.emailt);
+        Password = findViewById(R.id.passwordt);
         login = findViewById(R.id.button);
         Remember = findViewById(R.id.checkBox);
 

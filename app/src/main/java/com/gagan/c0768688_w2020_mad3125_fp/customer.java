@@ -68,7 +68,7 @@ public class customer implements Serializable {
         this.totalAmountToPay = totalAmountToPay;
     }
 
-    public customer(String customerId, String firstName, String lastName, String fullName, String email, ArrayList<Bill> bills, Double totalAmountToPay) {
+    public customer(String customerId, String firstName, String lastName,  String email) {
         this.customerId = customerId;
         this.firstName = firstName;
         this.lastName = lastName;
