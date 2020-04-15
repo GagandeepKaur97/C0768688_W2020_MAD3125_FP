@@ -21,19 +21,17 @@ public class login_screen extends AppCompatActivity {
    private TextView Email;
    private   TextView Password;
    private CheckBox Remember;
+   private Button login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
 
-        ActionBar actBar = getSupportActionBar();
-        assert actBar != null;
-        actBar.setTitle("Login");
 
         Email = findViewById(R.id.Email);
         Password = findViewById(R.id.password);
-        Button login = findViewById(R.id.button);
+        login = findViewById(R.id.button);
         Remember = findViewById(R.id.checkBox);
 
         SharedPreferences sharedPreferences = getSharedPreferences("login", MODE_PRIVATE);
@@ -61,13 +59,13 @@ public class login_screen extends AppCompatActivity {
                     editor.putString("password",password);
                     editor.apply();
 
-                    Intent intent = new Intent(login_screen.this, customer_screen.class);
+                    Intent intent = new Intent(login_screen.this, details_customers.class);
                     startActivity(intent);
                 }else {
                     editor.clear();
                     editor.apply();
 
-                    Intent intent = new Intent(login_screen.this, customer_screen.class);
+                    Intent intent = new Intent(login_screen.this, details_customers.class);
                     startActivity(intent);
                 }
             }
