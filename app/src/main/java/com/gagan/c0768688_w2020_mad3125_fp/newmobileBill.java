@@ -1,8 +1,10 @@
 package com.gagan.c0768688_w2020_mad3125_fp;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -82,6 +84,25 @@ public class newmobileBill extends AppCompatActivity {
                 } else  if(MobileNumber.getText().toString().matches("[0-9]{10}")){
                     Intent mint = new Intent(newmobileBill.this, Customer_screen.class);
                     startActivity(mint);
+                } else {
+                    AlertDialog.Builder alert = new AlertDialog.Builder(newmobileBill.this);
+                    alert.setCancelable(false);
+                    alert.setTitle(" Mobile Bill  Error");
+                    alert.setMessage("Invalid Mobile Number");
+                    alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+                    alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    });
+                    AlertDialog aDialog = alert.create();
+                    aDialog.show();
                 }
             }
         });
