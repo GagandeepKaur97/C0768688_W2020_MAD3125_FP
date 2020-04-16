@@ -32,11 +32,9 @@ public class list_of_customers extends AppCompatActivity {
         rvCustomerslist.setAdapter(customerAdapter);
     }
 
-    private void customersInfo(){
-        customers = new ArrayList<>();
-        customers.add(new customer("C0001","Gagandeep","kaur","gagan@gmail.com"));
-        customers.add(new customer("C0002","Evneet","kaur","nancy@gmail.com"));
-        customers.add(new customer("C0003","Kamalpreet","Kaur","kamal@gmail.com"));
+    private void customersInfo() {
+        customerRepo.getInstance().loadDetails();
+        customers = new ArrayList<>(customerRepo.getInstance().getCustomer());
     }
 
     @Override
