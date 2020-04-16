@@ -15,122 +15,150 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:layout_marginLeft="10dp"
-        android:background="@color/colorAccent"
-        android:backgroundTint="#1FCDF0"
-        android:text="Bill Date"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/design_default_color_on_secondary"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text=" ID"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/lblCellDate"
+        android:id="@+id/lblCellid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="@color/colorAccent"
-        android:backgroundTint="#1FCDF0"
-        android:text="DATE"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/design_default_color_on_secondary"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="BILL ID"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txtCellBillId"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
-        android:background="@color/colorAccent"
-        android:backgroundTint="#1FCDF0"
-        android:paddingLeft="10dp"
-        android:text="BILL ID"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txtCellBillDate"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
-        android:background="@color/colorAccent"
-        android:backgroundTint="#1FCDF0"
-        android:paddingLeft="10dp"
-        android:text="BILL DATE"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtCellBillDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@color/design_default_color_on_secondary"
+            android:backgroundTint="@android:color/holo_orange_dark"
+            android:paddingLeft="10dp"
+            android:text="Date"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/lblCellType"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
-        android:background="@color/colorAccent"
-        android:backgroundTint="#1FCDF0"
-        android:gravity="center"
-        android:text="TYPE"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtCellBilldate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/design_default_color_on_secondary"
+            android:backgroundTint="@android:color/holo_orange_dark"
+            android:paddingLeft="10dp"
+            android:text="BILL DATE"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txtCellBillType"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
-        android:background="@color/colorAccent"
-        android:backgroundTint="#1FCDF0"
-        android:paddingLeft="10dp"
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        android:text="BILL TYPE"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/lblCellType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/design_default_color_on_secondary"
+            android:backgroundTint="@android:color/holo_orange_dark"
+            android:gravity="center"
+            android:text="TYPE"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/lblAmount"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
-        android:background="@color/colorAccent"
-        android:backgroundTint="#1FCDF0"
-        android:gravity="center"
-        android:text="AMOUNT"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtCellBillType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/design_default_color_on_secondary"
+            android:backgroundTint="@android:color/holo_orange_dark"
+            android:paddingLeft="10dp"
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txtCellBillAmount"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:background="@color/colorAccent"
-        android:backgroundTint="#1FCDF0"
-        android:paddingLeft="10dp"
-        android:text="BILL AMOUNT"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+            android:text="BILL TYPE"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/lblAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/design_default_color_on_secondary"
+            android:backgroundTint="@android:color/holo_orange_dark"
+            android:gravity="center"
+            android:text="AMOUNT"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtCellBillAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@android:color/holo_red_light"
+            android:backgroundTint="@android:color/holo_orange_dark"
+            android:paddingLeft="10dp"
+            android:text="BILL AMOUNT"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </LinearLayout>

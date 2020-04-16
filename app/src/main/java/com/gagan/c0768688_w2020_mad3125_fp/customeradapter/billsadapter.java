@@ -60,7 +60,7 @@ public class billsadapter extends RecyclerView.Adapter<billsadapter.ViewHolder> 
         TextView txtCellBillAmount;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            txtCellBillId = itemView.findViewById(R.id.txtCellBillId);
+            txtCellBillId = itemView.findViewById(R.id.lblCellId);
             txtCellBillDate = itemView.findViewById(R.id.txtCellBillDate);
             txtCellBillType = itemView.findViewById(R.id.txtCellBillType);
             txtCellBillAmount = itemView.findViewById(R.id.txtCellBillAmount);

@@ -32,10 +32,10 @@ public class Customer_screen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_screen);
-        CustomerId = findViewById(R.id.textView5);
-        FullName = findViewById(R.id.textView6);
-        Email = findViewById(R.id.textView7);
-        TotalAmountToPay = findViewById(R.id.textView8);
+        CustomerId = findViewById(R.id.txtCustomerId);
+        FullName = findViewById(R.id.txtCustomerName);
+        Email = findViewById(R.id.txtCustomerEmail);
+        TotalAmountToPay = findViewById(R.id.txtCustomerTotalAmount);
         rvBills = findViewById(R.id.rvbills);
 
         customer tobj = (customer) getIntent().getParcelableExtra("customers");
