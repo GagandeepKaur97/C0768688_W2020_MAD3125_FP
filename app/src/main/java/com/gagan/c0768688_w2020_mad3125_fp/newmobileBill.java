@@ -79,7 +79,7 @@ public class newmobileBill extends AppCompatActivity {
                     MInternetUsage.setError("Please enter Internet Usage");
                 } else if(minutesUsage.isEmpty()){
                     MinutesUsage.setError("Please enter Minutes Usage");
-                } else {
+                } else  if(MobileNumber.getText().toString().matches("[0-9]{10}")){
                     Intent mint = new Intent(newmobileBill.this, Customer_screen.class);
                     startActivity(mint);
                 }
