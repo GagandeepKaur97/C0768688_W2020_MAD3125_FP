@@ -1,6 +1,6 @@
 package com.gagan.c0768688_w2020_mad3125_fp.classes;
 
-public class MobileBill extends Bill {
+public class MobileBill extends Bill implements IDisplay {
     private String mobilemanufacturer;
     private String Planname;
     private String mobileNo;
@@ -54,5 +54,10 @@ public class MobileBill extends Bill {
         this.mobileNo = mobileNo;
         this.internetGBused = internetGBused;
         this.minutesused = minutesused;
+    }
+
+    @Override
+    public void print() {
+
     }
 }

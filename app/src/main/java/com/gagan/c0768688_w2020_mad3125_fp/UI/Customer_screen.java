@@ -27,11 +27,11 @@ public class Customer_screen extends AppCompatActivity {
         Email = findViewById(R.id.textView7);
         TotalAmountToPay = findViewById(R.id.textView8);
 
-        customer tobj = (customer) getIntent().getSerializableExtra("customers");
+        customer tobj = (customer) getIntent().getParcelableExtra("customers");
 
         CustomerId.setText(tobj.getCustomerId());
         FullName.setText(tobj.getFullName());
-        Email.setText(tobj.getEmail());
+        Email.setText(tobj.getEmailId());
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {         //https://javatpoint.com/android-option-menu-example

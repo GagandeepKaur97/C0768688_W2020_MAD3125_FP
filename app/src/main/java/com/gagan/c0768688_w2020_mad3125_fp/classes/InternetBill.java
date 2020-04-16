@@ -2,7 +2,7 @@ package com.gagan.c0768688_w2020_mad3125_fp.classes;
 
 import java.io.Serializable;
 
-public class InternetBill extends Bill implements Serializable {
+public class InternetBill extends Bill implements Serializable,IDisplay {
     private String providername;
     private int internetGBused;
 
@@ -26,5 +26,10 @@ public class InternetBill extends Bill implements Serializable {
         super(billId, billDate, billType, totalBillAmount);
         this.providername = providername;
         this.internetGBused = internetGBused;
+    }
+
+    @Override
+    public void print() {
+
     }
 }

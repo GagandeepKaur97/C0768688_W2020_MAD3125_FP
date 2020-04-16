@@ -1,6 +1,6 @@
 package com.gagan.c0768688_w2020_mad3125_fp.classes;
 
-public class HydroBill extends Bill {
+public class HydroBill extends Bill implements IDisplay {
     private String agencyname;
     private int unitsconsumed;
 
@@ -27,6 +27,9 @@ public class HydroBill extends Bill {
     }
 
 
+    @Override
+    public void print() {
 
     }
+}
 

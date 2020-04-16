@@ -1,5 +1,6 @@
 package com.gagan.c0768688_w2020_mad3125_fp.Repo;
 
+import com.gagan.c0768688_w2020_mad3125_fp.classes.HydroBill;
 import com.gagan.c0768688_w2020_mad3125_fp.classes.customer;
 
 import java.util.ArrayList;
@@ -21,9 +22,12 @@ public class customerRepo {
         return this.customers;
     }
     public void loadDetails(){
+
+        HydroBill H1 = new HydroBill("HYD001","28/07/1995","hydro",444.0,"gagan",23);
         customer customer1 = new customer("C0001","Gagandeep","kaur","gagan@gmail.com");
         customer customer2 = new customer("C0002","evneet","kaur","evneet@yahoo.com");
         customer customer3 = new customer("C0003","ramneet","Kaur","ramneet@yahoo.com");
+        customer1.addBill("HYD",H1);
         customers.add(customer1);
         customers.add(customer2);
         customers.add(customer3);
