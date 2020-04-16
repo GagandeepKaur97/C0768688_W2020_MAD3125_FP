@@ -1,5 +1,6 @@
 package com.gagan.c0768688_w2020_mad3125_fp.customeradapter;
 
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -23,7 +24,10 @@ public class billsadapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        View mView = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.bill_add, parent, false);
+        billsadapter.billsViewHolder mBillsViewHolder = new billsadapter.billsViewHolder(mView);
+        return mBillsViewHolder;
     }
 
     @Override
