@@ -29,17 +29,26 @@ public class list_of_customers extends AppCompatActivity {
 
         customersInfo();
 
-        customerAdapter = new customerAdapter(customers);
+
+    }
+    protected void onRestart() {
+
+        super.onRestart();
+
+        customersInfo();
+    }
+
+    private void customersInfo() {
+
+//        customerRepo.getInstance().loadDetails();
+//        customers = new ArrayList<>(customerRepo.getInstance().getCustomers());
+        customerAdapter = new customerAdapter();
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
 
         rvCustomerslist.setLayoutManager(mLayoutManager);
 
         rvCustomerslist.setAdapter(customerAdapter);
-    }
 
-    private void customersInfo() {
-        customerRepo.getInstance().loadDetails();
-        customers = new ArrayList<>(customerRepo.getInstance().getCustomer());
     }
 
     @Override

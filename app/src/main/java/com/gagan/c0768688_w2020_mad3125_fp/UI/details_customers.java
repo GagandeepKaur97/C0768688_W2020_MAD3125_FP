@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 
 import com.gagan.c0768688_w2020_mad3125_fp.R;
+import com.gagan.c0768688_w2020_mad3125_fp.Repo.customerRepo;
+import com.gagan.c0768688_w2020_mad3125_fp.classes.customer;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class details_customers extends AppCompatActivity {
@@ -46,29 +48,33 @@ public class details_customers extends AppCompatActivity {
                     edtLastName.setError("Please enter Last Name");
                 } else if(cEmail.isEmpty()){
                     edtCEmail.setError("Please enter email");
-                } else if(edtCEmail.getText().toString().matches("[A-Z0-9a-z.%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}")) {
-                    Intent cint = new Intent(details_customers.this, list_of_customers.class);
-                    startActivity(cint);
-                } else {
-                    AlertDialog.Builder alert = new AlertDialog.Builder(details_customers.this);
-                    alert.setCancelable(false);
-                    alert.setTitle("New Customer Creation Error");
-                    alert.setMessage("Invalid Email");
-                    alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                        }
-                    });
-                    alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.cancel();
-                        }
-                    });
-                    AlertDialog aDialog = alert.create();
-                    aDialog.show();
+//                } else if(edtCEmail.getText().toString().matches("[A-Z0-9a-z.%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}")) {
+//                    Intent cint = new Intent(details_customers.this, list_of_customers.class);
+//                    startActivity(cint);
+//                } else if()  {
+//                    AlertDialog.Builder alert = new AlertDialog.Builder(details_customers.this);
+//                    alert.setCancelable(false);
+//                    alert.setTitle("New Customer Creation Error");
+//                    alert.setMessage("Invalid Email");
+//                    alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+//                        @Override
+//                        public void onClick(DialogInterface dialog, int which) {
+//                            dialog.dismiss();
+//                        }
+//                    });
+//                    alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+//                        @Override
+//                        public void onClick(DialogInterface dialog, int which) {
+//                            dialog.cancel();
+//                        }
+//                    });
+//                    AlertDialog aDialog = alert.create();
+//                    aDialog.show();
+                } else  {  customer tempObj = new customer(edtCustomerID.getText().toString(),edtFirstName.getText().toString(),edtLastName.getText().toString(),edtCEmail.getText().toString());
+                   customerRepo.getInstance().addcustomer(tempObj);
+                    finish();
                 }
+
             }
         });
     }
