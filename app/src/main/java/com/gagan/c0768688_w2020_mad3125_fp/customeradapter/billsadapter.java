@@ -13,7 +13,7 @@ import com.gagan.c0768688_w2020_mad3125_fp.classes.Bill;
 
 import java.util.ArrayList;
 
-public class billsadapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class billsadapter extends RecyclerView.Adapter<billsadapter.ViewHolder> {
     public static ArrayList<Bill> billArrayList;
 
     public billsadapter(ArrayList<Bill> billArrayList)
@@ -23,34 +23,45 @@ public class billsadapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
     @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public billsadapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View mView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.bill_add, parent, false);
-        billsadapter.billsViewHolder mBillsViewHolder = new billsadapter.billsViewHolder(mView);
+        billsadapter.ViewHolder mBillsViewHolder = new billsadapter.ViewHolder(mView);
         return mBillsViewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull billsadapter.ViewHolder holder, int position) {
+        Bill mBills = this.billArrayList.get(position);
+        holder.txtCellBillId.setText(mBills.getBillId());
+        holder.txtCellBillAmount.setText(mBills.getTotalBillAmount().toString());
+        holder.txtCellBillDate.setText(mBills.getBillDate().toString());
+        holder.txtCellBillType.setText(mBills.getBillType().toString());
 
     }
+
+
 
     @Override
-    public int getItemCount() {
-        return 0;
+    public int getItemCount()  {
+        return this.billArrayList.size();
+
     }
 
-    public class billsViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView txtCellBillId;
         TextView txtCellBillDate;
         TextView txtCellBillType;
         TextView txtCellBillAmount;
-        public billsViewHolder(@NonNull View itemView) {
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
             txtCellBillId = itemView.findViewById(R.id.txtCellBillId);
             txtCellBillDate = itemView.findViewById(R.id.txtCellBillDate);
             txtCellBillType = itemView.findViewById(R.id.txtCellBillType);
             txtCellBillAmount = itemView.findViewById(R.id.txtCellBillAmount);
 
-}}}
+}
+
+    }
+}
