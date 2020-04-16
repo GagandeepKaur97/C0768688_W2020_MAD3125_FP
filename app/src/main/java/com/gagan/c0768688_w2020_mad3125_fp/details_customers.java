@@ -1,7 +1,9 @@
 package com.gagan.c0768688_w2020_mad3125_fp;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -43,11 +45,32 @@ public class details_customers extends AppCompatActivity {
                     edtLastName.setError("Please enter Last Name");
                 } else if(cEmail.isEmpty()){
                     edtCEmail.setError("Please enter email");
-                } else {
+                } else if(edtCEmail.getText().toString().matches("[A-Z0-9a-z.%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}")) {
                     Intent cint = new Intent(details_customers.this, list_of_customers.class);
                     startActivity(cint);
+                } else {
+                    AlertDialog.Builder alert = new AlertDialog.Builder(details_customers.this);
+                    alert.setCancelable(false);
+                    alert.setTitle("New Customer Creation Error");
+                    alert.setMessage("Invalid Email");
+                    alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+                    alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    });
+                    AlertDialog aDialog = alert.create();
+                    aDialog.show();
                 }
             }
         });
     }
 }
+
+
