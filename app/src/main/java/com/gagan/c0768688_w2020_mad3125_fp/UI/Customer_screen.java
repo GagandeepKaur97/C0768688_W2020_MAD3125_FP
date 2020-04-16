@@ -1,6 +1,8 @@
 package com.gagan.c0768688_w2020_mad3125_fp.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,12 +12,20 @@ import android.widget.TextView;
 
 import com.gagan.c0768688_w2020_mad3125_fp.R;
 import com.gagan.c0768688_w2020_mad3125_fp.classes.customer;
+import com.gagan.c0768688_w2020_mad3125_fp.customeradapter.billsadapter;
+
+import java.util.ArrayList;
 
 public class Customer_screen extends AppCompatActivity {
     private TextView CustomerId;
     private TextView FullName;
     private TextView Email;
     private TextView TotalAmountToPay;
+
+    private RecyclerView rvBills;
+    private billsadapter Billsadapter;
+    private ArrayList billsArray;
+
 
 
     @Override
@@ -26,19 +36,43 @@ public class Customer_screen extends AppCompatActivity {
         FullName = findViewById(R.id.textView6);
         Email = findViewById(R.id.textView7);
         TotalAmountToPay = findViewById(R.id.textView8);
+        rvBills = findViewById(R.id.rvbills);
 
         customer tobj = (customer) getIntent().getParcelableExtra("customers");
+
+        billsArray = tobj.getBills();
+
+
 
         CustomerId.setText(tobj.getCustomerId());
         FullName.setText(tobj.getFullName());
         Email.setText(tobj.getEmailId());
+
+        customersInfo();
     }
+
+    private void customersInfo() {
+
+
+
+
+        Billsadapter = new billsadapter(this.billsArray);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+
+        rvBills.setLayoutManager(mLayoutManager);
+
+        rvBills.setAdapter((RecyclerView.Adapter) Billsadapter);
+
+
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {         //https://javatpoint.com/android-option-menu-example
 
         getMenuInflater().inflate(R.menu.add_bill, menu);
         return true;
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

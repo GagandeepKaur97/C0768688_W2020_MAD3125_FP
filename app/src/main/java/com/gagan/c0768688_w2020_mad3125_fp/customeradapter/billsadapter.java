@@ -14,11 +14,15 @@ import com.gagan.c0768688_w2020_mad3125_fp.classes.Bill;
 import java.util.ArrayList;
 
 public class billsadapter extends RecyclerView.Adapter<billsadapter.ViewHolder> {
-    public static ArrayList<Bill> billArrayList;
+    private static ArrayList<Bill> billArrayList;
 
     public billsadapter(ArrayList<Bill> billArrayList)
     {
         this.billArrayList = billArrayList;
+    }
+
+    public billsadapter() {
+
     }
 
     @NonNull

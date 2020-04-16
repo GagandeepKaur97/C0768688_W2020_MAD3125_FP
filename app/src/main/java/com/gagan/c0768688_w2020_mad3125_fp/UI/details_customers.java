@@ -48,9 +48,12 @@ public class details_customers extends AppCompatActivity {
                     edtLastName.setError("Please enter Last Name");
                 } else if(cEmail.isEmpty()){
                     edtCEmail.setError("Please enter email");
-//                } else if(edtCEmail.getText().toString().matches("[A-Z0-9a-z.%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}")) {
-//                    Intent cint = new Intent(details_customers.this, list_of_customers.class);
-//                    startActivity(cint);
+                } else if(edtCEmail.getText().toString().matches("[A-Z0-9a-z.%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"))
+                {
+                    customer tempObj = new customer(edtCustomerID.getText().toString(),edtFirstName.getText().toString(),edtLastName.getText().toString(),edtCEmail.getText().toString());
+                    customerRepo.getInstance().addcustomer(tempObj);
+                    finish();
+
 //                } else if()  {
 //                    AlertDialog.Builder alert = new AlertDialog.Builder(details_customers.this);
 //                    alert.setCancelable(false);
@@ -70,9 +73,8 @@ public class details_customers extends AppCompatActivity {
 //                    });
 //                    AlertDialog aDialog = alert.create();
 //                    aDialog.show();
-                } else  {  customer tempObj = new customer(edtCustomerID.getText().toString(),edtFirstName.getText().toString(),edtLastName.getText().toString(),edtCEmail.getText().toString());
-                   customerRepo.getInstance().addcustomer(tempObj);
-                    finish();
+                } else  {
+                    edtCEmail.setError("enter Valid email!");
                 }
 
             }
