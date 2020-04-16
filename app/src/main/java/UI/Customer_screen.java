@@ -1,4 +1,4 @@
-package com.gagan.c0768688_w2020_mad3125_fp;
+package UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+
+import com.gagan.c0768688_w2020_mad3125_fp.R;
+import classes.customer;
 
 public class Customer_screen extends AppCompatActivity {
     private TextView CustomerId;

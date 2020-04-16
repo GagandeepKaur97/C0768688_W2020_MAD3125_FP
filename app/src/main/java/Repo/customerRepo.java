@@ -1,10 +1,12 @@
-package com.gagan.c0768688_w2020_mad3125_fp;
+package Repo;
+
+import classes.customer;
 
 import java.util.ArrayList;
 
 public class customerRepo {
     private static customerRepo dataStorage = new customerRepo();
-    private ArrayList<customer> customer = new ArrayList<>();
+    private ArrayList<classes.customer> customer = new ArrayList<>();
 
     public customerRepo () {
     }

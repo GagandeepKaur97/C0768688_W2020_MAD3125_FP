@@ -1,21 +1,19 @@
-package com.gagan.c0768688_w2020_mad3125_fp;
+package UI;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.os.Bundle;
 
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.gagan.c0768688_w2020_mad3125_fp.R;
 
 public class login_screen extends AppCompatActivity {
    private TextView Email;

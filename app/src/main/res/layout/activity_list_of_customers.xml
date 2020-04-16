@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".list_of_customers">
+    tools:context="UI.list_of_customers">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvcustomerlist"

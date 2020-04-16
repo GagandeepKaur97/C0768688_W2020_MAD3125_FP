@@ -1,4 +1,4 @@
-package com.gagan.c0768688_w2020_mad3125_fp;
+package UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 
+import com.gagan.c0768688_w2020_mad3125_fp.R;
 import com.google.android.material.textfield.TextInputEditText;
 
 import java.text.SimpleDateFormat;
@@ -66,7 +67,7 @@ public class newHydroBill extends AppCompatActivity {
                 } else if(unitConsumed.isEmpty()){
                     Unitsconsumed.setError("Please enter Unit Consumed");
                 } else {
-                    Intent hint = new Intent(newHydroBill.this,Customer_screen.class);
+                    Intent hint = new Intent(newHydroBill.this, Customer_screen.class);
                     startActivity(hint);
                 }
             }

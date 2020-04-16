@@ -1,4 +1,4 @@
-package com.gagan.c0768688_w2020_mad3125_fp;
+package UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.gagan.c0768688_w2020_mad3125_fp.R;
 
 public class MainActivity extends AppCompatActivity {
     private static int SPLASH_SCREEN = 5000;
@@ -39,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this,login_screen.class);
+                Intent intent = new Intent(MainActivity.this, login_screen.class);
                 startActivity(intent);
                 finish();
             }

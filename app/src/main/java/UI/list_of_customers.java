@@ -1,4 +1,4 @@
-package com.gagan.c0768688_w2020_mad3125_fp;
+package UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,12 +9,17 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.gagan.c0768688_w2020_mad3125_fp.R;
+import classes.customer;
+import customeradapter.customerAdapter;
+import Repo.customerRepo;
+
 import java.util.ArrayList;
 
 public class list_of_customers extends AppCompatActivity {
     private RecyclerView rvCustomerslist;
     private ArrayList<customer> customers;
-    private customerAdapter customerAdapter;
+    private customeradapter.customerAdapter customerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,4 +1,4 @@
-package com.gagan.c0768688_w2020_mad3125_fp;
+package UI;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.gagan.c0768688_w2020_mad3125_fp.R;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class details_customers extends AppCompatActivity {

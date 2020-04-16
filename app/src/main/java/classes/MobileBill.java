@@ -1,4 +1,6 @@
-package com.gagan.c0768688_w2020_mad3125_fp;
+package classes;
+
+import classes.Bill;
 
 public class MobileBill extends Bill {
     private String mobilemanufacturer;
