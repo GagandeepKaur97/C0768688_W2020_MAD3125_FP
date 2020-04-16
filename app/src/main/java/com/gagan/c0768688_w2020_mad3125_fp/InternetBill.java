@@ -1,6 +1,8 @@
 package com.gagan.c0768688_w2020_mad3125_fp;
 
-public class InternetBill extends Bill {
+import java.io.Serializable;
+
+public class InternetBill extends Bill implements Serializable {
     private String providername;
     private int internetGBused;
 

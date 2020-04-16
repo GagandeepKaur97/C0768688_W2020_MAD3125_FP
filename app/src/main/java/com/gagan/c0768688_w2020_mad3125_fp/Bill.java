@@ -1,6 +1,6 @@
 package com.gagan.c0768688_w2020_mad3125_fp;
 
-public class Bill {
+public abstract class Bill {
     private String billId;
     private String billDate;
     private String billType;

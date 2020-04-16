@@ -1,5 +1,7 @@
 package com.gagan.c0768688_w2020_mad3125_fp;
 
+import android.os.Parcelable;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -37,7 +39,7 @@ public class customer implements Serializable {
     }
 
     public String getFullName() {
-        fullName = firstName + lastName;
+       fullName = firstName + lastName;
         return fullName;
     }
 
