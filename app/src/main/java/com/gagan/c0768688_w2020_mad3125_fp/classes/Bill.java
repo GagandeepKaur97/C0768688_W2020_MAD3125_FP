@@ -1,6 +1,8 @@
 package com.gagan.c0768688_w2020_mad3125_fp.classes;
 
-public abstract class Bill {
+import java.io.Serializable;
+
+public abstract class Bill implements IDisplay, Serializable {
     private String billId;
     private String billDate;
     private String billType;
