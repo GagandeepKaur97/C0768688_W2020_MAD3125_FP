@@ -1,9 +1,7 @@
-package classes;
+package com.gagan.c0768688_w2020_mad3125_fp.classes;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-
-import classes.Bill;
 
 public class customer implements Serializable {
     private String customerId;

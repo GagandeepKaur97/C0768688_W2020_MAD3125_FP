@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="UI.details_customers">
+    tools:context="com.gagan.c0768688_w2020_mad3125_fp.UI.details_customers">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/customerIDTextInputLayout"

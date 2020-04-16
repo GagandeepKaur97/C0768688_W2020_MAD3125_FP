@@ -1,4 +1,4 @@
-package customeradapter;
+package com.gagan.c0768688_w2020_mad3125_fp.customeradapter;
 
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -10,11 +10,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.gagan.c0768688_w2020_mad3125_fp.R;
-import classes.customer;
+import com.gagan.c0768688_w2020_mad3125_fp.classes.customer;
 
 import java.util.ArrayList;
 
-import UI.Customer_screen;
+import com.gagan.c0768688_w2020_mad3125_fp.UI.Customer_screen;
 
 public class customerAdapter extends RecyclerView.Adapter<customerAdapter.customerviewholder> {
     private ArrayList<customer> customersArrayList;

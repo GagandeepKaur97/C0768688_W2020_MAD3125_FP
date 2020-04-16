@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#fece2f"
     android:orientation="vertical"
-    tools:context="UI.MainActivity">
+    tools:context="com.gagan.c0768688_w2020_mad3125_fp.UI.MainActivity">
 
 
     <pl.droidsonroids.gif.GifImageView
