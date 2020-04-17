@@ -78,20 +78,12 @@ public class Customer_screen extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.menu3:
-                Intent intent3 = new Intent(Customer_screen.this, newHydroBill.class);
+                Intent intent3 = new Intent(Customer_screen.this, addNewBillActivity.class);
                 startActivity(intent3);
 
                 return true;
-            case R.id.menu4:
 
-                Intent intent4 = new Intent(Customer_screen.this, newmobileBill.class);
-                startActivity(intent4);
-                return true;
-            case R.id.menu5:
 
-                Intent intent5 = new Intent(Customer_screen.this, newInternetBill.class);
-                startActivity(intent5);
-                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

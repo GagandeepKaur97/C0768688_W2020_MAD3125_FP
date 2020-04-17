@@ -9,7 +9,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#ED9CB8"
+        android:background="#DDB3E4"
         android:fillViewport="true"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="-94dp">
@@ -17,7 +17,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#ED9CB8"
+            android:background="#E5BCEC"
             android:orientation="vertical">
 
             <ScrollView
@@ -27,13 +27,13 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#ED9CB8"
+                    android:background="#DDB3E4"
                     android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#ED9CB8"
+                        android:background="#DDB3E4"
                         android:orientation="horizontal">
 
                         <com.google.android.material.textview.MaterialTextView

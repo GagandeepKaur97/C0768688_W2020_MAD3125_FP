@@ -12,11 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar">
+        <activity android:name=".UI.addNewBillActivity"></activity>
         <activity android:name=".UI.list_of_customers" />
-        <activity android:name=".UI.newmobileBill" />
         <activity android:name=".UI.Customer_screen" />
-        <activity android:name=".UI.newInternetBill" />
-        <activity android:name=".UI.newHydroBill" />
         <activity android:name=".UI.details_customers" />
         <activity android:name=".UI.login_screen" />
         <activity
