@@ -27,9 +27,11 @@ public class customerRepo {
     }
 
     public void loadDetails() {
-        MobileBill M1 = new  MobileBill("MOB001","28/07/1995","MOBILE",500.5,"iphone", "0989789687","wakeup",15,24);
+        MobileBill M1   = new  MobileBill("MOB001","28/07/1995","MOBILE",500.5,"iphone", "0989789687","wakeup",15,24);
         InternetBill I1 = new InternetBill("INT001","25/01/2019","INTERNET",75.0,"Rogers",15);
-        HydroBill H1 = new HydroBill("HYD001", "28/07/1995", "HYDRO", 444.0, "gagan", 23);
+        HydroBill H1    = new HydroBill("HYD001", "28/07/1995", "HYDRO", 444.0, "Bell", 23);
+
+
         customer customer1 = new customer("C0001", "Gagandeep", "kaur", "gagan@gmail.com");
         customer customer2 = new customer("C0002", "evneet", "kaur", "evneet@yahoo.com");
         customer customer3 = new customer("C0003", "ramneet", "Kaur", "ramneet@yahoo.com");
