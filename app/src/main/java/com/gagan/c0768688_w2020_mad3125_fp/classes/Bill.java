@@ -4,11 +4,7 @@ import java.io.Serializable;
 
 public abstract class Bill implements IDisplay, Serializable {
 
-//    public enum BillType {
-//        Mobile,
-//        Hydro,
-//        Internet,
-//    }
+
      String billId;
      String billDate;
     String billType;
