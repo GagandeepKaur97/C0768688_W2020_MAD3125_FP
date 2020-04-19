@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar">
-        <activity android:name=".UI.addNewBillActivity"></activity>
+        <activity android:name=".UI.BillDisplay"></activity>
+        <activity android:name=".UI.addNewBillActivity" />
         <activity android:name=".UI.list_of_customers" />
         <activity android:name=".UI.Customer_screen" />
         <activity android:name=".UI.details_customers" />

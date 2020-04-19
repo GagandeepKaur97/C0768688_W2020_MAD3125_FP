@@ -116,6 +116,7 @@ public class addNewBillActivity extends AppCompatActivity implements AdapterView
                     HydroBill tempHydro = new HydroBill(billID.getText().toString(),billDate.getText().toString(),"hydro",50.5,agencyName.getText().toString(),Integer.parseInt(unitsUsed.getText().toString()));
 
                     customerObj.addBill("HYD1",tempHydro);
+                    startActivity(mIntent);
                     finish();
 
 

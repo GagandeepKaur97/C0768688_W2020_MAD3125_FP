@@ -4,17 +4,17 @@ import java.io.Serializable;
 
 public abstract class Bill implements IDisplay, Serializable {
 
-    public enum BillType {
-        Mobile,
-        Hydro,
-        Internet,
-    }
+//    public enum BillType {
+//        Mobile,
+//        Hydro,
+//        Internet,
+//    }
      String billId;
      String billDate;
-     BillType billType;
+    String billType;
      Double totalBillAmount= 0.0;
 
-    public Bill(String billId, String billDate,BillType billType, Double totalBillAmount) {
+    public Bill(String billId, String billDate, String billType, Double totalBillAmount) {
         this.billId = billId;
         this.billDate = billDate;
         this.billType = billType;
@@ -41,11 +41,11 @@ public abstract class Bill implements IDisplay, Serializable {
         this.billDate = billDate;
     }
 
-    public BillType getBillType() {
+    public  String getBillType() {
         return billType;
     }
 
-    public void setBillType(BillType billType) {
+    public void setBillType( String billType) {
         this.billType = billType;
     }
 

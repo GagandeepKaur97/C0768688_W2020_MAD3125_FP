@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.gagan.c0768688_w2020_mad3125_fp.R;
+import com.gagan.c0768688_w2020_mad3125_fp.Repo.StringExtension;
 import com.gagan.c0768688_w2020_mad3125_fp.Repo.customerRepo;
 import com.gagan.c0768688_w2020_mad3125_fp.classes.customer;
 import com.google.android.material.textfield.TextInputEditText;
@@ -48,7 +49,7 @@ public class details_customers extends AppCompatActivity {
                     edtLastName.setError("Please enter Last Name");
                 } else if(cEmail.isEmpty()){
                     edtCEmail.setError("Please enter email");
-                } else if(edtCEmail.getText().toString().matches("[A-Z0-9a-z.%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"))
+                } else if((StringExtension.emailValidation(edtCEmail.getText().toString())) == true)
                 {
                     customer tempObj = new customer(edtCustomerID.getText().toString(),edtFirstName.getText().toString(),edtLastName.getText().toString(),edtCEmail.getText().toString());
                     customerRepo.getInstance().addcustomer(tempObj);

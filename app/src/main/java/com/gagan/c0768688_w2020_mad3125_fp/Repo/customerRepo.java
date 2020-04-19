@@ -26,7 +26,7 @@ public class customerRepo {
 
     public void loadDetails() {
 
-        HydroBill H1 = new HydroBill("HYD001", "28/07/1995", "hydro", 444.0, "gagan", 23);
+        HydroBill H1 = new HydroBill("HYD001", "28/07/1995", "HYDRO", 444.0, "gagan", 23);
         customer customer1 = new customer("C0001", "Gagandeep", "kaur", "gagan@gmail.com");
         customer customer2 = new customer("C0002", "evneet", "kaur", "evneet@yahoo.com");
         customer customer3 = new customer("C0003", "ramneet", "Kaur", "ramneet@yahoo.com");
@@ -41,5 +41,5 @@ public class customerRepo {
     }
 
 
-   
+
 }
