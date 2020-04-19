@@ -1,7 +1,9 @@
 package com.gagan.c0768688_w2020_mad3125_fp.UI;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -13,8 +15,12 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.gagan.c0768688_w2020_mad3125_fp.R;
+import com.gagan.c0768688_w2020_mad3125_fp.Repo.customerRepo;
+import com.gagan.c0768688_w2020_mad3125_fp.classes.Bill;
 import com.gagan.c0768688_w2020_mad3125_fp.classes.HydroBill;
+import com.gagan.c0768688_w2020_mad3125_fp.classes.MobileBill;
 import com.gagan.c0768688_w2020_mad3125_fp.classes.customer;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -33,10 +39,13 @@ public class addNewBillActivity extends AppCompatActivity implements AdapterView
     private TextView mobilenumber;
     private TextView dataused;
     private FloatingActionButton fab;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new_bill);
+        ActionBar mActionBar = getSupportActionBar();
+        mActionBar.hide();
 
         fab = findViewById(R.id.fab);
         billID = findViewById(R.id.BillIDTextInputEditText);
