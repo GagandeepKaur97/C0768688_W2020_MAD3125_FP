@@ -31,14 +31,14 @@ public class InternetBill extends Bill implements Serializable,IDisplay {
 
     @Override
     public Double billCalculate(){
-        double billAmount = 0.0;
+        double totalBillAmount= 0.0;
         if( internetGBused  < 10){
-            billAmount = 3 * internetGBused ;
+            totalBillAmount = 3 * internetGBused ;
         }
         else {
-            billAmount = 3.5 * internetGBused ;
+            totalBillAmount= 3.5 * internetGBused ;
         }
-        return billAmount;
+        return totalBillAmount;
 
     }
 

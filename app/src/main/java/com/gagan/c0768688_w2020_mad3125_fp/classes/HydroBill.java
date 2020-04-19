@@ -30,16 +30,16 @@ public class HydroBill extends Bill implements IDisplay {
 
     @Override
     public Double billCalculate(){
-        double billAmount = 0.0;
+        double totalBillAmount = 0.0;
         if (unitsconsumed < 10)
         {
-            billAmount = 1.5 * unitsconsumed;
+            totalBillAmount = 1.5 * unitsconsumed;
         }
         else
         {
-            billAmount = 2 * unitsconsumed;
+            totalBillAmount = 2 * unitsconsumed;
         }
-        return billAmount;
+        return totalBillAmount;
     }
 
     @Override
