@@ -26,6 +26,20 @@ public class InternetBill extends Bill implements Serializable,IDisplay {
         super(billId, billDate, billType, totalBillAmount);
         this.providername = providername;
         this.internetGBused = internetGBused;
+        this.totalBillAmount = billCalculate();
+    }
+
+    @Override
+    public Double billCalculate(){
+        double billAmount = 0.0;
+        if( internetGBused  < 10){
+            billAmount = 3 * internetGBused ;
+        }
+        else {
+            billAmount = 3.5 * internetGBused ;
+        }
+        return billAmount;
+
     }
 
     @Override

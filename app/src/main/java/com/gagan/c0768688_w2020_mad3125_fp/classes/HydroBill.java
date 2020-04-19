@@ -41,5 +41,10 @@ public class HydroBill extends Bill implements IDisplay {
         }
         return billAmount;
     }
+
+    @Override
+    public void print() {
+
+    }
 }
 
