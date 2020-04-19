@@ -41,23 +41,5 @@ public class customerRepo {
     }
 
 
-    public boolean mobileValidation(String s) {
-        if (s.length() == 10) {
-            return true;
-        }
-        return false;
-    }
-
-
-
-    public String doubleFormatter(Double d)
-    {
-        return String.format("$ " + "%,.2f", d);
-    }
-    public boolean emailValidation(String s) {
-        String regex = "^[A-Za-z0-9+_.-]+@(.+)$";
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(s);
-        return matcher.find();
-    }
+   
 }
