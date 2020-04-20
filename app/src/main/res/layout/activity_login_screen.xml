@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EAC48D"
     tools:context="com.gagan.c0768688_w2020_mad3125_fp.UI.login_screen">
 
     <com.google.android.material.button.MaterialButton

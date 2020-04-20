@@ -23,7 +23,7 @@ public class BillDisplay extends AppCompatActivity {
         setContentView(R.layout.activity_bill_display);
 
         billtext = findViewById(R.id.txtbillDisplay);
-        billimg = findViewById(R.id.imgBilldisplay);
+//        billimg = findViewById(R.id.imgBilldisplay);
 
         Intent mIntent = getIntent();
         Bill billObj = (Bill) mIntent.getSerializableExtra("billOBJ");
@@ -31,7 +31,7 @@ public class BillDisplay extends AppCompatActivity {
         if(billObj.getBillType().matches("HYDRO"))
         {
 
-            billimg.setImageResource(R.mipmap.ic_hydro);
+//            billimg.setImageResource(R.mipmap.ic_hydro);
 
             HydroBill hbillObj = (HydroBill) mIntent.getSerializableExtra("billOBJ");
 
@@ -39,7 +39,7 @@ public class BillDisplay extends AppCompatActivity {
 
         }else if(billObj.getBillType().matches("MOBILE"))
         {
-            billimg.setImageResource(R.mipmap.ic_mobile_png);
+//            billimg.setImageResource(R.mipmap.ic_mobile_png);
 
             MobileBill mbillObj = (MobileBill) mIntent.getSerializableExtra("billOBJ");
 
@@ -47,7 +47,7 @@ public class BillDisplay extends AppCompatActivity {
 
         }else if(billObj.getBillType().matches("INTERNET"))
         {
-            billimg.setImageResource(R.mipmap.ic_internet);
+//            billimg.setImageResource(R.mipmap.ic_internet);
 
            InternetBill ibillObj = (InternetBill) mIntent.getSerializableExtra("billOBJ");
 

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#171716"
     tools:context=".UI.addNewBillActivity">
 
 
@@ -19,7 +20,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="50dp"
-            android:layout_marginEnd="32dp">
+            android:layout_marginEnd="32dp"
+            android:background="@color/colorAccent"
+            android:backgroundTint="@color/design_default_color_surface">
 
         </androidx.appcompat.widget.AppCompatSpinner>
 
@@ -36,6 +39,7 @@
                 android:id="@+id/BillIDTextInputEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#EEECF1"
                 android:hint="Bill ID" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -49,9 +53,10 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/BillDateTextInputEditText"
-                android:focusable="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:focusable="false"
+                android:background="#EEECF1"
                 android:hint="Bill Date" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -67,9 +72,10 @@
                 android:id="@+id/enterunitsusedInputEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#EEECF1"
                 android:hint="Enter units used" />
-        </com.google.android.material.textfield.TextInputLayout>
 
+        </com.google.android.material.textfield.TextInputLayout>
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -83,23 +89,9 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/enteragencynameInputEditText"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
+                android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/mobilenumberTextInputLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="32dp">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/mobilenumberInputEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Enter mobile number" />
-        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/enterdatausedTextInputLayout"
@@ -113,8 +105,27 @@
                 android:id="@+id/datausedInputEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#EEECF1"
                 android:hint="Enter data used" />
         </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mobilenumberTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="32dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/mobilenumberInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#EEECF1"
+                android:hint="Enter mobile number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -129,6 +140,7 @@
                 android:id="@+id/enterminutesusedInputEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#EEECF1"
                 android:hint="Enter minutes used" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -144,6 +156,7 @@
                 android:id="@+id/entermanufacturernameInputEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#EEECF1"
                 android:hint="Enter manufacturer name" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -159,22 +172,23 @@
                 android:id="@+id/enteryourplannameInputEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#EEECF1"
                 android:hint="Enter your plan name" />
         </com.google.android.material.textfield.TextInputLayout>
-<!--        <com.google.android.material.textfield.TextInputLayout-->
-<!--            android:id="@+id/billAmountTextInputLayout"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="32dp"-->
-<!--            android:layout_marginTop="20dp"-->
-<!--            android:layout_marginEnd="32dp">-->
+        <!--        <com.google.android.material.textfield.TextInputLayout-->
+        <!--            android:id="@+id/billAmountTextInputLayout"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="32dp"-->
+        <!--            android:layout_marginTop="20dp"-->
+        <!--            android:layout_marginEnd="32dp">-->
 
-<!--            <com.google.android.material.textfield.TextInputEditText-->
-<!--                android:id="@+id/billAmountInputEditText"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:hint="Enter Bill Amount" />-->
-<!--        </com.google.android.material.textfield.TextInputLayout>-->
+        <!--            <com.google.android.material.textfield.TextInputEditText-->
+        <!--                android:id="@+id/billAmountInputEditText"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:hint="Enter Bill Amount" />-->
+        <!--        </com.google.android.material.textfield.TextInputLayout>-->
 
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -183,7 +197,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="180dp"
             android:layout_marginTop="20dp"
-            android:src="@android:drawable/ic_input_add"
+            android:backgroundTint="#EDC3C3"
+            android:src="@android:drawable/ic_menu_send"
             app:fabSize="normal"
             app:rippleColor="#F3A19B" />
 
