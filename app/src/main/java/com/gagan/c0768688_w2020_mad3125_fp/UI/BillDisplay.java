@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.gagan.c0768688_w2020_mad3125_fp.R;
+import com.gagan.c0768688_w2020_mad3125_fp.Repo.StringExtension;
 import com.gagan.c0768688_w2020_mad3125_fp.classes.Bill;
 import com.gagan.c0768688_w2020_mad3125_fp.classes.HydroBill;
 import com.gagan.c0768688_w2020_mad3125_fp.classes.InternetBill;
@@ -34,7 +35,7 @@ public class BillDisplay extends AppCompatActivity {
 
             HydroBill hbillObj = (HydroBill) mIntent.getSerializableExtra("billOBJ");
 
-            billtext.setText("Bill ID    :   "+hbillObj.getBillId()+"\nBill Date    :   "+hbillObj.getBillDate()+"\nBill Type  :   "+hbillObj.getBillType()+"\nAgency Name    :   "+hbillObj.getAgencyname()+"\nUnits Consumed   :    "+hbillObj.getUnitsconsumed()+"\nBill Amount   :    "+hbillObj.getAgencyname());
+            billtext.setText("Bill ID    :   "+hbillObj.getBillId()+"\nBill Date    :   "+hbillObj.getBillDate()+"\nBill Type  :   "+hbillObj.getBillType()+"\nAgency Name    :   "+hbillObj.getAgencyname()+"\nUnits Consumed   :    "+hbillObj.getUnitsconsumed()+"\nBill Amount   :    "+ StringExtension.doubleFormatter(hbillObj.getTotalBillAmount()));
 
         }else if(billObj.getBillType().matches("MOBILE"))
         {
@@ -42,7 +43,7 @@ public class BillDisplay extends AppCompatActivity {
 
             MobileBill mbillObj = (MobileBill) mIntent.getSerializableExtra("billOBJ");
 
-            billtext.setText("Bill ID    :   "+mbillObj.getBillId()+"\nBill Date    :   "+mbillObj.getBillDate()+"\nBill Type  :   "+mbillObj.getBillType()+"\nMobile No    :   "+mbillObj.getMobileNo()+"\nModel Name  :   "+mbillObj.getMobilemanufacturer()+"\nPlan Name  :   "+mbillObj.getPlanname()+"\nInternet Used   :   "+mbillObj.getInternetGBused()+"\nMinutes used    :   "+mbillObj.getMinutesused()+"\nBill Amount  :   "+mbillObj.getTotalBillAmount());
+            billtext.setText("Bill ID    :   "+mbillObj.getBillId()+"\nBill Date    :   "+mbillObj.getBillDate()+"\nBill Type  :   "+mbillObj.getBillType()+"\nMobile No    :   "+mbillObj.getMobileNo()+"\nModel Name  :   "+mbillObj.getMobilemanufacturer()+"\nPlan Name  :   "+mbillObj.getPlanname()+"\nInternet Used   :   "+mbillObj.getInternetGBused()+"\nMinutes used    :   "+mbillObj.getMinutesused()+"\nBill Amount  :   "+StringExtension.doubleFormatter(mbillObj.getTotalBillAmount()));
 
         }else if(billObj.getBillType().matches("INTERNET"))
         {
@@ -50,7 +51,7 @@ public class BillDisplay extends AppCompatActivity {
 
            InternetBill ibillObj = (InternetBill) mIntent.getSerializableExtra("billOBJ");
 
-            billtext.setText("Bill ID    :   "+ibillObj.getBillId()+"\nBill Date    :   "+ibillObj.getBillDate()+"\nBill Type  :   "+ibillObj.getBillType()+"\nInternet Provider  :   "+ibillObj.getProvidername()+"\nInternet Used  :  "+ibillObj.getInternetGBused()+"\nBill Amount  :   "+ibillObj.getTotalBillAmount());
+            billtext.setText("Bill ID    :   "+ibillObj.getBillId()+"\nBill Date    :   "+ibillObj.getBillDate()+"\nBill Type  :   "+ibillObj.getBillType()+"\nInternet Provider  :   "+ibillObj.getProvidername()+"\nInternet Used  :  "+ibillObj.getInternetGBused()+"\nBill Amount  :   "+StringExtension.doubleFormatter(ibillObj.getTotalBillAmount()));
 
         }else {
 

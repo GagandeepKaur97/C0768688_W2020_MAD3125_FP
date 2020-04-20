@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.gagan.c0768688_w2020_mad3125_fp.R;
+import com.gagan.c0768688_w2020_mad3125_fp.Repo.StringExtension;
 import com.gagan.c0768688_w2020_mad3125_fp.UI.BillDisplay;
 import com.gagan.c0768688_w2020_mad3125_fp.classes.Bill;
 
@@ -42,7 +43,7 @@ public class billsadapter extends RecyclerView.Adapter<billsadapter.ViewHolder> 
     public void onBindViewHolder(@NonNull final billsadapter.ViewHolder holder, int position) {
         final Bill mBills = this.billArrayList.get(position);
         holder.txtCellBillId.setText(mBills.getBillId());
-        holder.txtCellBillAmount.setText(mBills.getTotalBillAmount().toString());
+        holder.txtCellBillAmount.setText(StringExtension.doubleFormatter(mBills.getTotalBillAmount()));
         holder.txtCellBillDate.setText(mBills.getBillDate().toString());
         holder.txtCellBillType.setText(mBills.getBillType().toString());
 

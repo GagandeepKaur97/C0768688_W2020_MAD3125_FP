@@ -17,9 +17,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.gagan.c0768688_w2020_mad3125_fp.R;
+import com.gagan.c0768688_w2020_mad3125_fp.Repo.StringExtension;
 import com.gagan.c0768688_w2020_mad3125_fp.Repo.customerRepo;
 import com.gagan.c0768688_w2020_mad3125_fp.classes.Bill;
 import com.gagan.c0768688_w2020_mad3125_fp.classes.HydroBill;
+import com.gagan.c0768688_w2020_mad3125_fp.classes.InternetBill;
 import com.gagan.c0768688_w2020_mad3125_fp.classes.MobileBill;
 import com.gagan.c0768688_w2020_mad3125_fp.classes.customer;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
@@ -44,6 +46,7 @@ public class addNewBillActivity extends AppCompatActivity implements AdapterView
     private TextView mobilenumber;
     private TextView dataused;
     private FloatingActionButton fab;
+    private TextView billamount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +66,8 @@ public class addNewBillActivity extends AppCompatActivity implements AdapterView
         mobilenumber = findViewById(R.id.mobilenumberInputEditText);
         dataused = findViewById(R.id.datausedInputEditText);
         spbillType = findViewById(R.id.spinnertype);
+        billamount = findViewById(R.id.billAmountInputEditText);
+
 
 
 
@@ -135,6 +140,25 @@ public class addNewBillActivity extends AppCompatActivity implements AdapterView
             fab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    if(StringExtension.mobileValidation(mobilenumber.getText().toString()) == true) {
+
+                        Intent mIntent = getIntent();
+                        customer customerObj = mIntent.getParcelableExtra("CustomerOBJ");
+
+
+                        MobileBill tempmobile = new MobileBill(billID.getText().toString(), billDate.getText().toString(), spbillType.getSelectedItem().toString(), Double.parseDouble(billamount.getText().toString()), manufacturerName.getText().toString(), planName.getText().toString(), mobilenumber.getText().toString(), Integer.parseInt(dataused.getText().toString()), Integer.parseInt(minutesUsed.getText().toString()));
+
+                        customerObj.addBill(tempmobile.getBillId(), tempmobile);
+
+                        Intent intent3 = new Intent(addNewBillActivity.this, Customer_screen.class);
+
+                        intent3.putExtra("customers", customerObj);
+
+                        startActivity(intent3);
+                    }else{
+                        mobilenumber.setError("enter valid mobile number");
+                    }
+
 
                 }
             });
@@ -155,11 +179,15 @@ public class addNewBillActivity extends AppCompatActivity implements AdapterView
                     customer customerObj = mIntent.getParcelableExtra("CustomerOBJ");
 
 
-                    HydroBill tempHydro = new HydroBill(billID.getText().toString(),billDate.getText().toString(),"hydro",50.5,agencyName.getText().toString(),Integer.parseInt(unitsUsed.getText().toString()));
+                    HydroBill tempHydro = new HydroBill(billID.getText().toString(),billDate.getText().toString(),spbillType.getSelectedItem().toString(),Double.parseDouble(billamount.getText().toString()),agencyName.getText().toString(),Integer.parseInt(unitsUsed.getText().toString()));
 
-                    customerObj.addBill("HYD1",tempHydro);
-                    startActivity(mIntent);
-                    finish();
+                    customerObj.addBill(tempHydro.getBillId(),tempHydro);
+                    Intent intent3 = new Intent(addNewBillActivity.this,Customer_screen.class);
+
+                    intent3.putExtra("CustomerOBJ",customerObj);
+
+                    startActivity(intent3);
+
 
 
 
@@ -180,6 +208,20 @@ public class addNewBillActivity extends AppCompatActivity implements AdapterView
             fab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    Intent mIntent = getIntent();
+                    customer customerObj = mIntent.getParcelableExtra("CustomerOBJ");
+
+                    InternetBill tempinternet = new InternetBill(billID.getText().toString(),billDate.getText().toString(),spbillType.getSelectedItem().toString(),Double.parseDouble(billamount.getText().toString()),agencyName.getText().toString(),Integer.parseInt(billamount.getText().toString()));
+
+
+                    customerObj.addBill(tempinternet.getBillId(),tempinternet);
+                    Intent intent3 = new Intent(addNewBillActivity.this,Customer_screen.class);
+
+                    intent3.putExtra("CustomerOBJ",customerObj);
+
+                    startActivity(intent3);
+
+
 
                 }
             });

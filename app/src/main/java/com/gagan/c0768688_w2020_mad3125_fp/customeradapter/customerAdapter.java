@@ -42,7 +42,7 @@ public class customerAdapter extends RecyclerView.Adapter<customerAdapter.custom
             public void onClick(View v) {
                 customer cust = customerRepo.getInstance().getCustomers().get(position);
                 Intent sint = new Intent(holder.itemView.getContext(), Customer_screen.class);
-                sint.putExtra("customers", cust);
+                sint.putExtra("CustomerOBJ", cust);
                 holder.itemView.getContext().startActivity(sint);
             }
         });

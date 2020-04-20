@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.gagan.c0768688_w2020_mad3125_fp.R;
+import com.gagan.c0768688_w2020_mad3125_fp.Repo.StringExtension;
 import com.gagan.c0768688_w2020_mad3125_fp.classes.customer;
 import com.gagan.c0768688_w2020_mad3125_fp.customeradapter.billsadapter;
 
@@ -38,20 +39,24 @@ public class Customer_screen extends AppCompatActivity {
         TotalAmountToPay = findViewById(R.id.txtCustomerTotalAmount);
         rvBills = findViewById(R.id.rvbills);
 
-        customer tobj = (customer) getIntent().getParcelableExtra("customers");
 
-        billsArray = tobj.getBills();
-
-
-
-        CustomerId.setText(tobj.getCustomerId());
-        FullName.setText(tobj.getFullName());
-        Email.setText(tobj.getEmailId());
 
         customersInfo();
     }
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        customersInfo();
+
+    }
 
     private void customersInfo() {
+
+        Intent mIntent = getIntent();
+
+        customer tobj = mIntent.getParcelableExtra("CustomerOBJ");
+
+        billsArray = tobj.getBills();
 
 
 
@@ -62,6 +67,13 @@ public class Customer_screen extends AppCompatActivity {
         rvBills.setLayoutManager(mLayoutManager);
 
         rvBills.setAdapter((RecyclerView.Adapter) Billsadapter);
+
+
+        CustomerId.setText(tobj.getCustomerId());
+        FullName.setText(tobj.getFullName());
+        Email.setText(tobj.getEmailId());
+        TotalAmountToPay.setText(StringExtension.doubleFormatter(tobj.getTotalAmount()));
+
 
 
     }
@@ -78,7 +90,11 @@ public class Customer_screen extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.menu3:
+
+                Intent mIntent = getIntent();
+                customer customerObj = mIntent.getParcelableExtra("CustomerOBJ");
                 Intent intent3 = new Intent(Customer_screen.this, addNewBillActivity.class);
+                intent3.putExtra("CustomerOBJ",customerObj);
                 startActivity(intent3);
 
                 return true;
