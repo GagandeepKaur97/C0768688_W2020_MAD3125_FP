@@ -52,6 +52,8 @@ public class addNewBillActivity extends AppCompatActivity implements AdapterView
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new_bill);
+
+
         ActionBar mActionBar = getSupportActionBar();
         mActionBar.hide();
 
@@ -66,7 +68,7 @@ public class addNewBillActivity extends AppCompatActivity implements AdapterView
         mobilenumber = findViewById(R.id.mobilenumberInputEditText);
         dataused = findViewById(R.id.datausedInputEditText);
         spbillType = findViewById(R.id.spinnertype);
-        billamount = findViewById(R.id.billAmountInputEditText);
+       // billamount = findViewById(R.id.billAmountInputEditText);
 
 
 
@@ -146,13 +148,13 @@ public class addNewBillActivity extends AppCompatActivity implements AdapterView
                         customer customerObj = mIntent.getParcelableExtra("CustomerOBJ");
 
 
-                        MobileBill tempmobile = new MobileBill(billID.getText().toString(), billDate.getText().toString(), spbillType.getSelectedItem().toString(), Double.parseDouble(billamount.getText().toString()), manufacturerName.getText().toString(), planName.getText().toString(), mobilenumber.getText().toString(), Integer.parseInt(dataused.getText().toString()), Integer.parseInt(minutesUsed.getText().toString()));
+                        MobileBill tempmobile = new MobileBill(billID.getText().toString(), billDate.getText().toString(), spbillType.getSelectedItem().toString(),0.0, manufacturerName.getText().toString(), planName.getText().toString(), mobilenumber.getText().toString(), Integer.parseInt(dataused.getText().toString()), Integer.parseInt(minutesUsed.getText().toString()));
 
                         customerObj.addBill(tempmobile.getBillId(), tempmobile);
 
                         Intent intent3 = new Intent(addNewBillActivity.this, Customer_screen.class);
 
-                        intent3.putExtra("customers", customerObj);
+                        intent3.putExtra("CustomerOBJ", customerObj);
 
                         startActivity(intent3);
                     }else{
@@ -179,7 +181,7 @@ public class addNewBillActivity extends AppCompatActivity implements AdapterView
                     customer customerObj = mIntent.getParcelableExtra("CustomerOBJ");
 
 
-                    HydroBill tempHydro = new HydroBill(billID.getText().toString(),billDate.getText().toString(),spbillType.getSelectedItem().toString(),Double.parseDouble(billamount.getText().toString()),agencyName.getText().toString(),Integer.parseInt(unitsUsed.getText().toString()));
+                    HydroBill tempHydro = new HydroBill(billID.getText().toString(),billDate.getText().toString(),spbillType.getSelectedItem().toString(),0.0,agencyName.getText().toString(),Integer.parseInt(unitsUsed.getText().toString()));
 
                     customerObj.addBill(tempHydro.getBillId(),tempHydro);
                     Intent intent3 = new Intent(addNewBillActivity.this,Customer_screen.class);
@@ -211,7 +213,7 @@ public class addNewBillActivity extends AppCompatActivity implements AdapterView
                     Intent mIntent = getIntent();
                     customer customerObj = mIntent.getParcelableExtra("CustomerOBJ");
 
-                    InternetBill tempinternet = new InternetBill(billID.getText().toString(),billDate.getText().toString(),spbillType.getSelectedItem().toString(),Double.parseDouble(billamount.getText().toString()),agencyName.getText().toString(),Integer.parseInt(billamount.getText().toString()));
+                    InternetBill tempinternet = new InternetBill(billID.getText().toString(),billDate.getText().toString(),spbillType.getSelectedItem().toString(),0.0,agencyName.getText().toString(),Integer.parseInt(billamount.getText().toString()));
 
 
                     customerObj.addBill(tempinternet.getBillId(),tempinternet);
