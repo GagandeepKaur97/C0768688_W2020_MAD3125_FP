@@ -21,7 +21,7 @@
 ### a user can add bills by just clicking on the particular type of bill. so by choosing a particular type of bill only that will display which is required.
 ### the amount of bill will automatically added and calculated.
 
-# Refrences
+# References
 - https://developer.android.com/guide/topics/ui/layout/recyclerview
 - https://stackoverflow.com/questions/9366280/android-round-to-2-decimal-places
 - https://developer.android.com/training/snackbar
