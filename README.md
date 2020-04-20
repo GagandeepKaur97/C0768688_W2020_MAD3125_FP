@@ -12,3 +12,4 @@
 
 ###  on the third screen , there are list of customers who has bills .
 ### there   are three customers when we click on that particular customer then it will display all the details of that particular customer.
+### there is one menu on the right side,
