@@ -15,3 +15,4 @@
 ### there is one menu on the right side, from where we can add new customers by clicking on that ietm it will take the user to next screen.
 on which all the fields must be filled with proper details.
 ### after adding the customer,it will displayed under the current customers.
+### another ietm on the customer screen is logout button by which customer can logout and comes directly on the login screen.
