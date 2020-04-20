@@ -8,5 +8,5 @@
 
 ### on the first screen , basically it is the splash screen on which i did one twist which of image view  ,basically that is a gif with the animations,  by this what i mean is that image will come slowly slowly from top and text will come from bottom.
 
-### second screen is the login screen ,
+### second screen is the login screen , on which 
 
