@@ -18,3 +18,4 @@ on which all the fields must be filled with proper details.
 ### another ietm on the customer screen is logout button by which customer can logout and comes directly on the login screen.
 
 ### now , when we move to customer details ,there is one menu on which there is one item of add bill.
+### a user can add bills by just clicking on the particular type of bill.
