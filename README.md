@@ -19,4 +19,4 @@ on which all the fields must be filled with proper details.
 
 ### now , when we move to customer details ,there is one menu on which there is one item of add bill.
 ### a user can add bills by just clicking on the particular type of bill. so by choosing a particular type of bill only that will display which is required.
-###
+### the amount of bill will automatically added and calculated.
