@@ -39,7 +39,7 @@ public class BillDisplay extends AppCompatActivity {
 
         }else if(billObj.getBillType().matches("MOBILE"))
         {
-            billimg.setImageResource(R.mipmap.ic_mobile);
+            billimg.setImageResource(R.mipmap.ic_mobile_png);
 
             MobileBill mbillObj = (MobileBill) mIntent.getSerializableExtra("billOBJ");
 
