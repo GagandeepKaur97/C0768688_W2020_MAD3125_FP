@@ -8,6 +8,7 @@
 
 ### on the first screen , basically it is the splash screen on which i did one twist which of image view  ,basically that is a gif with the animations,  by this what i mean is that image will come slowly slowly from top and text will come from bottom.
 
-### second screen is the login screen , on which two  text fields, login and password along with that there is one checkbox with the login button.
-alert is there if login and password is wrong.
+### second screen is the login screen , on which two  text fields, login and password along with that there is one checkbox with the login button.alert is there if login and password is wrong.
+
+###  on the third screen , there are list of customers who has bills .
 
