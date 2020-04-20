@@ -5,3 +5,5 @@
 ## in this app , new customers are added along with their new bills.
 
 ## their total amount of bill will display on the screen .
+
+# on the first screen , basically it is the splash screen on which i did one twist which of image view  ,basically that is a gif with the animations, 
