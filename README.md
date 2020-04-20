@@ -20,3 +20,14 @@
 ### now , when we move to customer details ,there is one menu on which there is one item of add bill.
 ### a user can add bills by just clicking on the particular type of bill. so by choosing a particular type of bill only that will display which is required.
 ### the amount of bill will automatically added and calculated.
+
+# Refrences
+- https://developer.android.com/guide/topics/ui/layout/recyclerview
+- https://stackoverflow.com/questions/9366280/android-round-to-2-decimal-places
+- https://developer.android.com/training/snackbar
+- https://material.io/develop/android/components/text-fields/
+- http://www.deboma.com/article/mobile-development/5/android-datepicker-and-age-calculation/
+- https://www.vogella.com/tutorials/AndroidParcelable/article.html
+- https://www.journaldev.com/18392/java-convert-string-to-double
+- https://www.vogella.com/tutorials/JavaRegularExpressions/article.html
+- https://stackoverflow.com/questions/8447234/android-creating-two-columns-in-a-linearlayout
