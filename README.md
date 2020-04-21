@@ -16,7 +16,7 @@
 ### Second screen is the login screen , on which two  text fields, login and password along with that there is one checkbox with the login button.alert is there if login and password is wrong.<img src="https://github.com/GagandeepKaur97/C0768688_W2020_MAD3125_FP/blob/master/screenshots/Screenshot_1587423329.png" alt="splashscreen" width="200" height="250"/>
 
 ###  on the third screen , there are list of customers who has bills .
-<img src="https://github.com/GagandeepKaur97/C0768688_W2020_MAD3125_FP/blob/master/screenshots/Screenshot_1587423329.png" alt="splashscreen" width="250" height="250"/>
+<img src="https://github.com/GagandeepKaur97/C0768688_W2020_MAD3125_FP/blob/master/screenshots/Screenshot_1587423361.png" alt="splashscreen" width="250" height="250"/>
 ### there   are three customers when we click on that particular customer then it will display all the details of that particular customer.<img src="https://github.com/GagandeepKaur97/C0768688_W2020_MAD3125_FP/blob/master/screenshots/Screenshot_1587423329.png" alt="splashscreen" width="250" height="250"/>
 ### There is one menu on the right side, from where we can add new customers by clicking on that ietm it will take the user to next screen.<img src="https://github.com/GagandeepKaur97/C0768688_W2020_MAD3125_FP/blob/master/screenshots/Screenshot_1587423329.png" alt="splashscreen" width="250" height="250"/>
 ### on which all the fields must be filled with proper details.
