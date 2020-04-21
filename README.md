@@ -6,7 +6,10 @@
 
 ## Their total amount of bill will display on the screen .
 
-<img src="https://github.com/GagandeepKaur97/C0768688_W2020_MAD3125_FP/blob/master/screenshots/Screenshot_1587423329.png" alt="splashscreen" width="250" height="250"/>
+<img src="https://github.com/GagandeepKaur97/C0768688_W2020_MAD3125_FP/blob/master/screenshots/Screenshot_1587423350.png" alt="splashscreen" width="250" height="250"/>
+<img src="https://github.com/GagandeepKaur97/C0768688_W2020_MAD3125_FP/blob/master/screenshots/Screenshot_1587423352.png" alt="splashscreen" width="250" height="250"/>
+
+
 
 ### on the first screen , basically it is the splash screen on which i did one twist which of image view  ,basically that is a gif with the animations,  by this what i mean is that image will come slowly slowly from top and text will come from bottom.
 
