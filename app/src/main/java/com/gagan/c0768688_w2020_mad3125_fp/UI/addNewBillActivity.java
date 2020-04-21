@@ -54,8 +54,8 @@ public class addNewBillActivity extends AppCompatActivity implements AdapterView
         setContentView(R.layout.activity_add_new_bill);
 
 
-        ActionBar mActionBar = getSupportActionBar();
-        mActionBar.hide();
+        ActionBar actBar = getSupportActionBar();
+        actBar.setTitle(" New Bill");
 
         fab = findViewById(R.id.fab);
         billID = findViewById(R.id.BillIDTextInputEditText);

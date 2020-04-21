@@ -1,5 +1,6 @@
 package com.gagan.c0768688_w2020_mad3125_fp.UI;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -26,6 +27,8 @@ public class list_of_customers extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_of_customers);
          rvCustomerslist = findViewById(R.id.rvcustomerlist);
+        ActionBar actBar = getSupportActionBar();
+        actBar.setTitle("List of Customers");
 
         customersInfo();
 

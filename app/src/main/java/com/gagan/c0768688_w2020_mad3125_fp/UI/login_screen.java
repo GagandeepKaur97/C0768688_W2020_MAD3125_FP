@@ -1,5 +1,6 @@
 package com.gagan.c0768688_w2020_mad3125_fp.UI;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -25,6 +26,10 @@ public class login_screen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
+
+        ActionBar actBar = getSupportActionBar();
+        actBar.setTitle("Login");
+
 
 
         Email = findViewById(R.id.emailt);

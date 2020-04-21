@@ -1,5 +1,6 @@
 package com.gagan.c0768688_w2020_mad3125_fp.UI;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -21,6 +22,8 @@ public class BillDisplay extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bill_display);
+        ActionBar actBar = getSupportActionBar();
+        actBar.setTitle("Bill's details");
 
         billtext = findViewById(R.id.txtbillDisplay);
 //        billimg = findViewById(R.id.imgBilldisplay);

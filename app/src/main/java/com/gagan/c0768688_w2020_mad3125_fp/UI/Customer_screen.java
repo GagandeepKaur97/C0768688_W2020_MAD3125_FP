@@ -1,5 +1,6 @@
 package com.gagan.c0768688_w2020_mad3125_fp.UI;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -33,6 +34,8 @@ public class Customer_screen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_screen);
+        ActionBar actBar = getSupportActionBar();
+        actBar.setTitle("customer's Details");
         CustomerId = findViewById(R.id.txtCustomerId);
         FullName = findViewById(R.id.txtCustomerName);
         Email = findViewById(R.id.txtCustomerEmail);

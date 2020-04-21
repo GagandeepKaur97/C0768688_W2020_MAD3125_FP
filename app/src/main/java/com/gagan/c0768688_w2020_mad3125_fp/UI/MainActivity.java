@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     //variables
     Animation topanim,bottomanim;
     ImageView image;
-    TextView Name,Id;
+    TextView Name,Id,Bills;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,11 +32,12 @@ public class MainActivity extends AppCompatActivity {
         image = findViewById(R.id.imageView2);
         Name = findViewById(R.id.textView2);
         Id = findViewById(R.id.textView3);
+       Bills = findViewById(R.id.Bills);
 
-
-        image.setAnimation(topanim);
-        Name.setAnimation(bottomanim);
+        image.setAnimation(bottomanim);
+        Name.setAnimation(topanim);
         Id.setAnimation(bottomanim);
+        Bills.setAnimation(topanim);
 
         new Handler().postDelayed(new Runnable() {
             @Override
