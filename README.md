@@ -37,6 +37,11 @@
 ### date picker is added for adding dates
 <img src="https://github.com/GagandeepKaur97/C0768688_W2020_MAD3125_FP/blob/master/screenshots/Screenshot_1587423566.png" alt="splashscreen" width="200" height="250"/>
 
+### email validation
+<img src="https://github.com/GagandeepKaur97/C0768688_W2020_MAD3125_FP/blob/master/screenshots/Screenshot_1587423488.png" alt="splashscreen" width="200" height="250"/>
+
+
+
 # References
 - https://developer.android.com/guide/topics/ui/layout/recyclerview
 - https://stackoverflow.com/questions/9366280/android-round-to-2-decimal-places
